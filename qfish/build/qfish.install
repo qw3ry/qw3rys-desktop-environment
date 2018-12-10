@@ -1,0 +1,8 @@
+post_install() {
+	echo "Put the following line into your ~/.bashrc to complete the installation:"
+	echo "  exec fish"
+}
+
+post_upgrade() {
+	post_install
+}

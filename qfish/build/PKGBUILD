@@ -1,0 +1,26 @@
+## Maintainer: Tobias Beeh
+pkgname=qfish
+pkgver=0.1
+pkgrel=11
+
+pkgdesc="Qw3ry's Fish: The fish shell with some additional config and theming"
+arch=('any')
+url="fishshell.com"
+license=('GPL')
+depends=(
+	'fish'
+	'fisher'
+	'powerline-fonts'
+)
+
+source=('sources.tar')
+sha256sums=('0e055bd08bf008d5c951b59da568ff0898bf1d11a558de8011c13c1f2a33a8f9')
+
+install='qfish.install'
+
+package() {
+	rm sources.tar
+	mkdir -p "$pkgdir/usr/share/fish/vendor_functions.d/"
+	install -Dm 644 *.fish "$pkgdir/usr/share/fish/vendor_functions.d/"
+	fish -c "fisher add jorgebucaran/fish-metro"
+}

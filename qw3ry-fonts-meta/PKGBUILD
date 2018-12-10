@@ -1,0 +1,11 @@
+# Maintainer: Tobias Beeh
+pkgname=qw3ry-fonts-meta
+pkgver=1.0
+pkgrel=2
+
+pkgdesc="aggregates various font packages"
+arch=('any')
+url="localhost"
+license=('GPL')
+depends=('ttf-roboto' 'ttf-liberation' 'ttf-droid' 'ttf-dejavu' 'noto-fonts' 'noto-fonts-cjk' 
+'noto-fonts-emoji' 'noto-fonts-extra' 'ttf-font-awesome')

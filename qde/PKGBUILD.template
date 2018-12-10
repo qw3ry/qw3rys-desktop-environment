@@ -1,0 +1,49 @@
+## Maintainer: Tobias Beeh
+pkgname=qde
+pkgver=%Vmajor%.%Vminor%
+pkgrel=%Vpatch%
+
+pkgdesc="Qw3ry's Desktop Environment: a desktop environment on i3 basis"
+arch=('any')
+url="localhost"
+license=('GPL')
+depends=(
+	'gdm'
+	'rofi'
+	'i3-wm'
+	'i3lock-color'
+	'scrot'
+	'pasystray'
+	'qw3ry-fonts-meta'
+	'polybar'
+	'jsoncpp'
+	'udiskie'
+	'autorandr'
+	'compton'
+	'dunst'
+	'dunstify'
+	'lxsession'
+	'feh'
+	'dex'
+)
+optdepends=(
+	'qw3ry-guitools-meta: various gui tools such as terminal emulator, file manager, browser etc.'
+	'qw3ry-clitools-meta: various CLI customizations'
+	'network-manager-applet: for network tray applet'
+	'nextcloud-client: for file sync'
+	'pamac-tray-appindicator: for pacman updater tray'
+	'gnome-keyring: for keymanagement'
+)
+conflicts=('qw3rys-desktop-environment')
+
+source=(
+	'sources.tar'
+)
+sha256sums=('%sha%')
+
+install='qde.install'
+
+package() {
+	rm sources.tar
+	cp -r $srcdir/* $pkgdir/
+}

@@ -1,0 +1,15 @@
+# Maintainer: Tobias Beeh
+pkgname=qw3ry-guitools-meta
+pkgver=1.0
+pkgrel=9
+
+pkgdesc="aggregates basic gui programs"
+arch=('any')
+url="localhost"
+license=('GPL')
+depends=('thunderbird' 'opera' 'opera-ffmpeg-codecs' 'chromium' 'terminator' 'rambox-bin' 
+	'nextcloud-client' 'keepass' 'keepass-plugin-http'
+	'gwenview' 'gimp' 'drawio-desktop' 'inkscape' 'libreoffice-fresh' 'agave' 'gnome-screenshot'
+	'rhythmbox' 'vlc' 'handbrake' 'nemo' 'meld' 'gparted' 'baobab' 'gnome-system-monitor'
+	'gedit' 'atom' 'gnome-nettool' 'paprefs' 'evince'
+	'xarchiver')

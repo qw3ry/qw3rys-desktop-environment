@@ -1,0 +1,10 @@
+# Maintainer: Tobias Beeh
+pkgname=qw3ry-codecs-meta
+pkgver=1.0
+pkgrel=1
+
+pkgdesc="aggregates various codec packages"
+arch=('any')
+url="localhost"
+license=('GPL')
+depends=('gstreamer' 'lame' 'libvorbis' 'libfdk-aac' 'flac')

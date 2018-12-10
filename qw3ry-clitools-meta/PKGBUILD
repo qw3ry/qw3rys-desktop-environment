@@ -1,0 +1,19 @@
+# Maintainer: Tobias Beeh
+pkgname=qw3ry-clitools-meta
+pkgver=0.1
+pkgrel=2
+
+pkgdesc="aggregates various cli packages"
+arch=('any')
+url="localhost"
+license=('GPL')
+depends=(
+	'curl'
+	'wget'
+	'imagemagick'
+	'aspell-de'
+	'aspell-en'
+	'nftables'
+	'polkit' 
+	'qfish'
+)

@@ -1,0 +1,12 @@
+# Maintainer: Tobias Beeh
+pkgname=qw3ry-basic-units-meta
+pkgver=0.1
+pkgrel=3
+
+pkgdesc="aggregates some basic systemd units"
+arch=('any')
+url="localhost"
+license=('GPL')
+depends=('acpid' 'dbus' 'avahi' 'cups' 'cronie' 'intel-ucode' 'networkmanager')
+
+install='INSTALL'
