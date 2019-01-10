@@ -1,8 +1,0 @@
-post_install() {
-	echo "You want to enable the following systemd units:"
-	echo "  systemctl enable acpid"
-	echo "  systemctl enable avahi-daemon"
-	echo "  systemctl enable org.cups.cupsd"
-	echo "  systemctl enable cronie"
-	echo "  systemctl enable NetworkManager"
-}
