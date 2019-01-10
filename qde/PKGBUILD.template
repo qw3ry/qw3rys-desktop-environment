@@ -21,7 +21,6 @@ depends=(
 	'autorandr'
 	'compton'
 	'dunst'
-	'dunstify'
 	'lxsession'
 	'feh'
 	'dex'
