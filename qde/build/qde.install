@@ -1,6 +1,0 @@
-post_install() {
-	echo "You want to enable the following systemd units:"
-	echo "  systemctl enable gdm"
-	echo "You may want to set the i3 terminal as default:"
-	echo "  gsettings set org.cinnamon.desktop.default-applications.terminal exec 'i3-sensible-terminal'"
-}
