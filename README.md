@@ -28,7 +28,7 @@ The desktop environment includes some additonal software for use (incomplete lis
 - chromium
 - rambox (messenging client)
 - nextcloud client (filesync)
-- keepass (password manager)
+- keepassxc (password manager)
 - gwenview
 - gimp
 - drawio (desktop version, drawing tool)
