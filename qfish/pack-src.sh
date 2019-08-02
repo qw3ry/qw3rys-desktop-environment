@@ -4,9 +4,6 @@ VERSION_MAJOR=${1-$(cat version.maj)}
 VERSION_MINOR=${1-$(cat version.min)}
 VERSION_PATCH=${1-$(cat version.patch)}
 
-# increase patch version for next package
-echo $VERSION_PATCH + 1 | bc > version.patch
-
 # create archive
 mkdir -p build
 cd sources
