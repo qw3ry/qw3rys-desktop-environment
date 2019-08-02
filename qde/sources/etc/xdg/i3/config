@@ -162,15 +162,17 @@ bindsym $mod+Shift+a exec --no-startup-id $QDE_SCRIPTS/lock.sh
 
 ### AUTOSTARTS
 exec --no-startup-id dex -a
-exec --no-startup-id "sleep 5;nextcloud"
 exec --no-startup-id compton -f --config $QDE_CONFIG/compton.conf
 exec --no-startup-id dunst
-exec --no-startup-id "sleep 10;rambox"
 exec --no-startup-id systemd-inhibit --what=handle-power-key sleep infinity # let systemd ignore the power button
-exec --no-startup-id udiskie --tray --use-udisks2
-
 exec_always --no-startup-id feh --bg-scale $QDE_RESOURCE/wallpaper.jpg
 exec_always --no-startup-id $QDE_SCRIPTS/polybar.sh
+
+exec --no-startup-id "sleep 2;keepassxc"
+exec --no-startup-id "sleep 5;nextcloud"
+exec --no-startup-id "sleep 10;rambox"
+exec --no-startup-id udiskie --tray --use-udisks2
+
 
 # change the window title to include the class
 for_window [class=".*"] title_format "[%class] %title"
