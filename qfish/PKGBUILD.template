@@ -22,5 +22,5 @@ package() {
 	rm sources.tar
 	mkdir -p "$pkgdir/usr/share/fish/vendor_functions.d/"
 	install -Dm 644 *.fish "$pkgdir/usr/share/fish/vendor_functions.d/"
-	fish -c "fisher add jorgebucaran/fish-metro"
+	fish -c "fisher add fishpkg/fish-prompt-metro"
 }
