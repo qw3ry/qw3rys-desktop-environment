@@ -173,6 +173,10 @@ exec --no-startup-id "sleep 5;nextcloud"
 exec --no-startup-id "sleep 10;rambox"
 exec --no-startup-id udiskie --tray --use-udisks2
 
+# set default workspaces
+assign [class="keepassxc"] $workspace9
+assign [class="Skype"] $workspace0
+assign [class="Rambox"] $workspace0
 
 # change the window title to include the class
 for_window [class=".*"] title_format "[%class] %title"
