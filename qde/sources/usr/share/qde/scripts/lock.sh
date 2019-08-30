@@ -3,6 +3,7 @@
 tmpbg='/tmp/screen.png'
 icon=$QDE_RESOURCE/lock-icon.png
 
+rm "$tmpbg"
 scrot "$tmpbg"
 convert "$tmpbg" -scale 5% -scale 2000% "$tmpbg"
 
