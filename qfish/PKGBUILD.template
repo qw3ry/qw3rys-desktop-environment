@@ -11,6 +11,7 @@ depends=(
 	'fish'
 	'fisher'
 	'powerline-fonts'
+	'fishmarks'
 )
 
 source=('sources.tar')
@@ -18,9 +19,13 @@ sha256sums=('%sha%')
 
 install='qfish.install'
 
+build() {
+	# add fisher package =D
+	fisher_path=. fish -c "fisher add fishpkg/fish-prompt-metro"
+}
+
 package() {
-	rm sources.tar
-	mkdir -p "$pkgdir/usr/share/fish/vendor_functions.d/"
-	install -Dm 644 *.fish "$pkgdir/usr/share/fish/vendor_functions.d/"
-	fish -c "fisher add fishpkg/fish-prompt-metro"
+	install -d "$pkgdir/$(pkgconf -variable functionsdir fish)" "$pkgdir/$(pkgconf -variable confdir fish)"
+	install -Dm 644 functions/* "$pkgdir/$(pkgconf -variable functionsdir fish)/"
+	install -Dm 644 conf.d/* "$pkgdir/$(pkgconf -variable confdir fish)/"
 }
