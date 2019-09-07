@@ -9,9 +9,11 @@ url="fishshell.com"
 license=('GPL')
 depends=(
 	'fish'
-	'fisher'
 	'powerline-fonts'
 	'fishmarks'
+)
+makedepends=(
+	'fisher'
 )
 
 source=('sources.tar')
