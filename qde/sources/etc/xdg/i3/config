@@ -174,7 +174,7 @@ exec --no-startup-id "sleep 10;rambox"
 exec --no-startup-id udiskie --tray --use-udisks2
 
 # set default workspaces
-assign [class="keepassxc"] $workspace9
+assign [class="KeePassXC"] $workspace9
 assign [class="Skype"] $workspace0
 assign [class="Rambox"] $workspace0
 
