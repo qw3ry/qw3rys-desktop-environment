@@ -161,17 +161,18 @@ mode "$mode_exit" {
 bindsym $mod+Shift+a exec --no-startup-id $QDE_SCRIPTS/lock.sh
 
 ### AUTOSTARTS
+
+# freedesktop autostarts
 exec --no-startup-id dex -a
-exec --no-startup-id compton -f --config $QDE_CONFIG/compton.conf
-exec --no-startup-id dunst
-exec --no-startup-id systemd-inhibit --what=handle-power-key sleep infinity # let systemd ignore the power button
+
+# handle power key by ourselves, so make systemd ignore it
+exec --no-startup-id systemd-inhibit --what=handle-power-key sleep infinity
+
+# desktop bgr and bar
 exec_always --no-startup-id feh --bg-scale $QDE_RESOURCE/wallpaper.jpg
 exec_always --no-startup-id $QDE_SCRIPTS/polybar.sh
 
-exec --no-startup-id "sleep 2;keepassxc"
-exec --no-startup-id "sleep 5;nextcloud"
-exec --no-startup-id "sleep 10;rambox"
-exec --no-startup-id udiskie --tray --use-udisks2
+exec --no-startup-id $QDE_SCRIPTS/autostart.sh
 
 # set default workspaces
 assign [class="KeePassXC"] $workspace9

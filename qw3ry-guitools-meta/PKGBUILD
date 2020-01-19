@@ -1,6 +1,6 @@
 # Maintainer: Tobias Beeh
 pkgname=qw3ry-guitools-meta
-pkgver=1.1
+pkgver=1.2
 pkgrel=1
 
 pkgdesc="aggregates basic gui programs"
@@ -12,4 +12,4 @@ depends=('thunderbird' 'firefox' 'chromium' 'terminator' 'rambox-bin'
 	'gpicview-gtk3' 'gimp' 'drawio-desktop' 'inkscape' 'libreoffice-fresh' 'agave' 'gnome-screenshot'
 	'rhythmbox' 'vlc' 'handbrake' 'nemo' 'meld' 'gparted' 'baobab' 'gnome-system-monitor'
 	'gedit' 'atom' 'gnome-nettool' 'paprefs' 'evince'
-	'xarchiver')
+	'xarchiver' 'gnome-disk-utility')
