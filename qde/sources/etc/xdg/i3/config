@@ -144,16 +144,22 @@ bindsym XF86AudioRaiseVolume  exec $QDE_SCRIPTS/pacvol.sh up
 bindsym XF86AudioLowerVolume  exec $QDE_SCRIPTS/pacvol.sh down
 
 # Shutdown/Lock/Logout/...
-set $mode_exit [L]ock | [H]alt | [R]eboot | [S]uspend | Lo[g]out
-bindsym $mod+Shift+e mode "$mode_exit"
-bindsym XF86PowerOff         mode "$mode_exit"
+set $mode_exit [L]ock | [H]alt | [R]eboot ([t]o entry) | [S]uspend | Lo[g]out
+bindsym $mod+Shift+e				mode "$mode_exit"
+bindsym XF86PowerOff				mode "$mode_exit"
 mode "$mode_exit" {
 	bindsym l                 mode "default"; exec --no-startup-id $QDE_SCRIPTS/lock.sh
+
 	bindsym h                 exec --no-startup-id systemctl poweroff -i
+
 	bindsym r                 exec --no-startup-id systemctl reboot
+	bindsym t									exec --no-startup-id $QDE_SCRIPTS/reboot-to.fish
+
 	bindsym XF86PowerOff      mode "default"; exec --no-startup-id $QDE_SCRIPTS/lock.sh; exec systemctl suspend
 	bindsym s                 mode "default"; exec --no-startup-id $QDE_SCRIPTS/lock.sh; exec systemctl suspend
+
 	bindsym g                 exec i3-msg exit
+
 	bindsym Escape            mode "default"
 	bindsym Return            mode "default"
 }

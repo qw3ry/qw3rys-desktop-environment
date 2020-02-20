@@ -24,6 +24,7 @@ depends=(
 	'lxsession'
 	'feh'
 	'dex'
+	'fish'
 )
 optdepends=(
 	'qw3ry-guitools-meta: various gui tools such as terminal emulator, file manager, browser etc.'
